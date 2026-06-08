@@ -83,23 +83,19 @@ img {
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 10px;
   font-family: var(--font-mono);
   font-size: 1.2rem;
   font-weight: 700;
 }
 
-.logo-bracket {
-  color: var(--accent-green);
+.nav-logo-img {
+  height: 32px;
+  width: auto;
 }
 
 .logo-text {
   color: var(--text-primary);
-}
-
-.logo-cursor {
-  color: var(--accent-green);
-  animation: blink 1s step-end infinite;
 }
 
 .nav-menu {

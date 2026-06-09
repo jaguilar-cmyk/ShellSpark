@@ -132,9 +132,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function updateActiveLink() {
     let current = '';
+    const half = window.innerHeight / 2;
     sections.forEach(section => {
       const rect = section.getBoundingClientRect();
-      if (rect.top <= 120) {
+      if (rect.top <= half) {
         current = section.getAttribute('id');
       }
     });

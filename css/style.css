@@ -336,7 +336,7 @@ img {
 .hero-stats {
   display: flex;
   justify-content: center;
-  gap: 48px;
+  gap: 32px;
   flex-wrap: wrap;
 }
 
@@ -356,6 +356,30 @@ img {
   font-size: 0.85rem;
   color: var(--text-muted);
   margin-top: 4px;
+}
+
+.stat-item-ia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  border-left: 1px solid var(--glass-border);
+  border-right: 1px solid var(--glass-border);
+}
+
+.stat-badge {
+  display: block;
+  font-size: 1.8rem;
+  line-height: 1;
+  color: var(--accent-purple);
+  margin-bottom: 2px;
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.7; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.15); }
 }
 
 /* ── Section common ── */
@@ -640,11 +664,21 @@ img {
   }
 
   .hero-stats {
-    gap: 28px;
+    gap: 20px;
   }
 
   .stat-number {
     font-size: 1.5rem;
+  }
+
+  .stat-item-ia {
+    border: none;
+    padding: 0;
+    width: 100%;
+  }
+
+  .stat-badge {
+    font-size: 1.4rem;
   }
 
   .features-grid {

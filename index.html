@@ -55,16 +55,24 @@
       </div>
       <div class="hero-stats">
         <div class="stat-item">
-          <span class="stat-number" data-target="15">0</span>
-          <span class="stat-label">Rutas de aprendizaje</span>
+          <span class="stat-number" data-key="comandos">0</span>
+          <span class="stat-label">Comandos disponibles</span>
         </div>
         <div class="stat-item">
-          <span class="stat-number" data-target="200">0</span>
-          <span class="stat-label">Comandos interactivos</span>
+          <span class="stat-number" data-key="lecciones">0</span>
+          <span class="stat-label">Lecciones</span>
         </div>
         <div class="stat-item">
-          <span class="stat-number" data-target="50">0</span>
-          <span class="stat-label">Desafíos</span>
+          <span class="stat-number" data-key="laboratorios">0</span>
+          <span class="stat-label">Laboratorios</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-key="examenes">0</span>
+          <span class="stat-label">Exámenes</span>
+        </div>
+        <div class="stat-item stat-item-ia">
+          <span class="stat-badge">✦</span>
+          <span class="stat-label">ShellSpark IA</span>
         </div>
       </div>
     </div>
@@ -77,52 +85,54 @@
         <span class="section-tag">// Características</span>
         <h2 class="section-title">Todo lo que necesitas para <span class="highlight">aprender haciendo</span></h2>
         <p class="section-desc">
-          ShellSpark combina aprendizaje, práctica, gamificación e inteligencia artificial
-          para convertir el estudio de CMD y PowerShell en una experiencia moderna y adictiva.
+          ShellSpark es una plataforma integral para aprender, practicar y dominar la administración
+          de Windows mediante CMD, PowerShell, scripting y automatización. Combina documentación,
+          simulación, laboratorios interactivos, evaluaciones, analíticas de progreso y asistencia
+          inteligente en una experiencia moderna diseñada tanto para principiantes como para usuarios avanzados.
         </p>
       </div>
       <div class="features-grid">
         <div class="feature-card" data-delay="0">
           <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
           </div>
-          <h3 class="feature-title">Comandos paso a paso</h3>
-          <p class="feature-desc">Aprende desde cero con lecciones interactivas que explican cada comando en detalle.</p>
+          <h3 class="feature-title">Biblioteca integrada</h3>
+          <p class="feature-desc">Accede a una biblioteca completa con comandos, ejemplos y documentación organizada para consultar en cualquier momento.</p>
         </div>
         <div class="feature-card" data-delay="100">
           <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h1.01"/><path d="M14 9h1.01"/><path d="M9 14h6"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 014 4c0 2-2 3-4 5-2-2-4-3-4-5a4 4 0 014-4z"/><path d="M4 22v-2a4 4 0 014-4h8a4 4 0 014 4v2"/></svg>
           </div>
-          <h3 class="feature-title">Entorno seguro</h3>
-          <p class="feature-desc">Practica sin miedo en un sandbox aislado. Sin riesgo de dañar tu sistema real.</p>
+          <h3 class="feature-title">ShellSpark IA</h3>
+          <p class="feature-desc">Un asistente inteligente que resuelve dudas, explica comandos y te ayuda con scripts en tiempo real.</p>
         </div>
         <div class="feature-card" data-delay="200">
           <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 8l-4 4"/><path d="M12 12l-4 4"/><path d="M12 8v8"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
           </div>
-          <h3 class="feature-title">Desafíos y misiones</h3>
-          <p class="feature-desc">Pone a prueba tu conocimiento con misiones diseñadas para simular casos reales.</p>
+          <h3 class="feature-title">Quizzes interactivos</h3>
+          <p class="feature-desc">Refuerza tus conocimientos con quizzes dinámicos diseñados para afianzar cada tema y medir tu comprensión.</p>
         </div>
         <div class="feature-card" data-delay="300">
           <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 014 4c0 2-2 3-4 5-2-2-4-3-4-5a4 4 0 014-4z"/><path d="M4 22v-2a4 4 0 014-4h8a4 4 0 014 4v2"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           </div>
-          <h3 class="feature-title">IA integrada</h3>
-          <p class="feature-desc">Un asistente inteligente te guía, responde dudas y te da feedback en tiempo real.</p>
+          <h3 class="feature-title">Simulador de terminal</h3>
+          <p class="feature-desc">Practica comandos CMD y PowerShell en un simulador interactivo sin riesgos, con feedback inmediato.</p>
         </div>
         <div class="feature-card" data-delay="400">
           <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
           </div>
-          <h3 class="feature-title">Niveles y logros</h3>
-          <p class="feature-desc">Gana experiencia, sube de nivel y desbloquea logros mientras avanzas.</p>
+          <h3 class="feature-title">Progreso y logros</h3>
+          <p class="feature-desc">Gana XP, sube de nivel, desbloquea logros y sigue tu evolución con estadísticas detalladas.</p>
         </div>
         <div class="feature-card" data-delay="500">
           <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           </div>
-          <h3 class="feature-title">Rutas guiadas</h3>
-          <p class="feature-desc">Sigue rutas de aprendizaje diseñadas por expertos, desde principiante a avanzado.</p>
+          <h3 class="feature-title">Favoritos e historial</h3>
+          <p class="feature-desc">Guarda comandos y lecciones favoritas, y accede rápidamente a tu historial de contenido importante.</p>
         </div>
       </div>
     </div>
@@ -157,7 +167,6 @@
         <div class="download-info">
           <span class="info-chip">Gratuito</span>
           <span class="info-chip">Versión 1.0.0</span>
-          <span class="info-chip">~45 MB</span>
           <span class="info-chip">Sin registro</span>
         </div>
       </div>

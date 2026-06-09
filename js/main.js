@@ -77,23 +77,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
   featureCards.forEach(card => observer.observe(card));
 
-  /* ── Animated Counters ── */
-  const statNumbers = document.querySelectorAll('.stat-number');
+  /* ── Dynamic Stats ── */
+  async function loadStats() {
+    try {
+      const res = await fetch('data/stats.json');
+      const stats = await res.json();
+      initCounters(stats);
+    } catch {
+      console.warn('No se pudieron cargar las estadísticas');
+    }
+  }
 
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-        const target = parseInt(el.dataset.target);
-        if (!el.dataset.animated) {
-          el.dataset.animated = 'true';
-          animateCounter(el, target);
+  function initCounters(stats) {
+    const statNumbers = document.querySelectorAll('.stat-number[data-key]');
+
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const key = el.dataset.key;
+          const target = stats[key];
+          if (target && !el.dataset.animated) {
+            el.dataset.animated = 'true';
+            animateCounter(el, target);
+          }
         }
-      }
-    });
-  }, { threshold: 0.5 });
+      });
+    }, { threshold: 0.5 });
 
-  statNumbers.forEach(el => counterObserver.observe(el));
+    statNumbers.forEach(el => counterObserver.observe(el));
+  }
 
   function animateCounter(el, target) {
     let current = 0;
@@ -111,6 +124,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     tick();
   }
+
+  loadStats();
 
   /* ── Active nav link on scroll ── */
   const sections = document.querySelectorAll('section[id]');

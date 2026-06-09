@@ -133,8 +133,8 @@ document.addEventListener('DOMContentLoaded', () => {
   function updateActiveLink() {
     let current = '';
     sections.forEach(section => {
-      const top = section.offsetTop - 100;
-      if (window.scrollY >= top) {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= 120) {
         current = section.getAttribute('id');
       }
     });
